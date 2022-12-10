@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    <meta charset="utf-8">
+    <title>Kard</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%;} 
+    </style>
+
+    </head>
+
+    <body>
+
+        <style>
+
+            .modal-content{
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0px;
+            border-radius: 0%;   
+            font-family: Gill Sans, 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';   
+            }  
+
+            .modal-autoheight .modal-body {
+            position: relative;
+            overflow-y: auto;
+            min-height: 100px !important;
+            max-height: 600px !important;
+            }
+
+            .btn-outline-dark1 {
+            background-color: rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:515px;
+            left: 500px;
+            }
+
+            .btn-outline-dark2 {
+            background-color:  rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:175px;
+            left: 450px;
+            }
+
+            .btn-outline-dark3 {
+            background-color:  rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:490px;
+            left: 950px;
+            }
+
+            .btn-outline-dark4 {
+            background-color:  rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:490px;
+            left: 925px;
+            }
+
+            .btn-outline-dark5 {
+            background-color:  rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:555px;
+            left: 500px;
+            }
+
+            .btn-outline-dark6 {
+            background-color:  rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:650px;
+            left: 850px;
+            }
+
+            .btn-outline-dark7 {
+            background-color:  rgb(211, 162, 246);
+            border-color: white;
+            border-radius: 50%; 
+            color: grey;
+            box-shadow: 50px;
+            width: 0.25%;
+            height: 3%;
+            text-align: center; 
+            position: fixed; 
+            bottom:550px;
+            left: 625px;
+            } 
+
+        </style>
+
+        <div id="map"></div>
+
+         
+
+    <div id="buttons">
+
+        <section id="B3">
+        <button type="button" class="btn btn-outline-dark1" data-bs-toggle="modal" data-bs-target="#myModal1"></button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-l modal-dialog-centered">
+        <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">10th November, 2022: Sticks and Sushi</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">  
+        <img src="1_2.jpg" height="100%" width="100%">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <div id="buttons">
+
+        <section id="B3">
+        <button type="button" class="btn btn-outline-dark2" data-bs-toggle="modal" data-bs-target="#myModal2"></button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal2">
+        <div class="modal-dialog modal-l modal-dialog-centered">
+        <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">19th November, 2022: Battersea Power Station, Ice Skating</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">  
+        <img src="2_2.jpg" height="100%" width="100%">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    <div id="buttons">
+
+        <section id="B3">
+        <button type="button" class="btn btn-outline-dark3" data-bs-toggle="modal" data-bs-target="#myModal3"></button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal3">
+        <div class="modal-dialog modal-l modal-dialog-centered">
+        <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">25th November, 2022: Your Place, Cooking Dinner</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">  
+        <img src="5_3.jpg" height="100%" width="100%">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <div id="buttons">
+
+        <section id="B3">
+        <button type="button" class="btn btn-outline-dark4" data-bs-toggle="modal" data-bs-target="#myModal4"></button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal4">
+        <div class="modal-dialog modal-l modal-dialog-centered">
+        <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">28th November, 2022: Your Place, Our first</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">  
+        <img src="6_2.jpg" height="100%" width="100%">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <div id="buttons">
+
+        <section id="B3">
+        <button type="button" class="btn btn-outline-dark5" data-bs-toggle="modal" data-bs-target="#myModal5"></button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal5">
+        <div class="modal-dialog modal-l modal-dialog-centered">
+        <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">3rd December, 2022: Secret Comedy Club, A favourite place</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">  
+        <img src="7_2.jpg" height="100%" width="100%">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <div id="buttons">
+
+        <section id="B3">
+        <button type="button" class="btn btn-outline-dark6" data-bs-toggle="modal" data-bs-target="#myModal6"></button>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal6">
+        <div class="modal-dialog modal-l modal-dialog-centered">
+        <div class="modal-content">
+    
+        <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">8th December, 2022: First time I met your friends</h4>
+        <button color="white" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">  
+        <img src="10_1.jpg" height="100%" width="100%">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <script>
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpa2Etc2luaGEiLCJhIjoiY2t5a2x0ZmU2MjJ2MzJucXBqa3ludmFnciJ9.kHtDaktoXqMCHmEnLHAJCw';
+
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/elika-sinha/ckze7r4lm002314s0jjty1gs5',
+        center: [-0.1, 51.5],
+        zoom: 12,
+        draggable : false,        //disable drag
+        dragPan : false,          //disable drag panning
+        dragRotate : false,       //disable drag rotation
+        dragPitch : false,        //disable drag pitch
+        scrollWheelZoom : false,  //disable wheel zoom
+        touchZoom : false,        //disable touchzoom
+        doubleClickZoom : false,  //disable doubleclick zoom
+        });
+
+        // disable map scroll
+        map.scrollZoom.disable(); 
+    </script>
+
+    </div> 
+
+    </body>
+</html>
